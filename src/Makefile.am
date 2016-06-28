@@ -1,15 +1,5 @@
 # plugindir is set in configure
-
-XDC_CONFIG_BASENAME = gstticodecplugin_$(GST_TI_PLATFORM)
 plugin_LTLIBRARIES  = libgstticodecplugin.la
-
-# Add TIC6Accel elements
-if HAVE_C6ACCEL
-C6ACCEL_SRC = gsttic6xcolorspace.c
-C6ACCEL_HEAD = gsttic6xcolorspace.h
-C6ACCEL_LIB = $(C6ACCEL_INSTALL_DIR)/soc/c6accelw/lib/c6accelw_$(C6ACCEL_PLATFORM).a470MV
-endif
-
 
 # sources used to compile this plug-in
 libgstticodecplugin_la_SOURCES = gstticodecplugin.c gsttidisplaysink2.c gsttiauddec1.c gsttividdec2.c gsttiimgenc1.c gsttiimgdec1.c gsttidmaibuffertransport.c gsttidmaibuftab.c gstticircbuffer.c gsttidmaivideosink.c gstticodecs.c gstticodecs_platform.c  gsttiquicktime_aac.c gsttiquicktime_h264.c gsttividenc1.c gsttiaudenc1.c gstticommonutils.c gsttividresize.c gsttiprepencbuf.c gsttidmaiperf.c gsttiquicktime_mpeg4.c $(C6ACCEL_SRC) 
