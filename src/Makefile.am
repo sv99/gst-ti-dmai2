@@ -6,7 +6,7 @@ libgstticodecplugin_la_SOURCES = gstticodecplugin.c gsttidisplaysink2.c gsttiaud
 
 # flags used to compile this plugin
 # add other _CFLAGS and _LIBS as needed
-libgstticodecplugin_la_CFLAGS  = $(GST_CFLAGS) $(UST_CFLAGS)\
+libgstticodecplugin_la_CFLAGS  = $(GST_CFLAGS) $(UST_CFLAGS) \
 $(shell cat @XDC_CONFIG_BASENAME@/compiler.opt | sed 's/-march=armv5t//') -DPLATFORM=$(PLATFORM) -Dxdc__RESTRICT__
 
 libgstticodecplugin_la_LIBADD  = $(GST_LIBS) $(GST_BASE_LIBS) $(UST_LIBS)\
